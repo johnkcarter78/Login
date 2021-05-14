@@ -2,6 +2,9 @@ import {useContext} from "react";
 import About from "./components/about";
 import Header from "./components/header";
 import Login from "./components/loginPage";
+import Contact from "./components/contact";
+import Help from "./components/help";
+import Welcome from "./components/welcome";
 import {ControlViewsContext} from "./context/controlViews";
 
 
@@ -24,6 +27,27 @@ function App() {
         <Login/>
       </div>
     );
+  } else if(view === "contact"){
+    return (
+      <div className="App">
+        <Header/>
+        <Contact/>
+      </div>
+    );
+  } else if(view === "help"){
+    return (
+      <div className="App">
+        <Header/>
+        <Help/>
+      </div>
+    );
+  } else if(view === "welcome"){
+    return (
+      <div className="App">
+        <Header/>
+        <Welcome/>
+      </div>
+    )
   }
 
   
